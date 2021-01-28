@@ -12,6 +12,11 @@
 		0325B56725C20CF800AB3799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0325B56525C20CF800AB3799 /* Main.storyboard */; };
 		0325B56925C20CFD00AB3799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0325B56825C20CFD00AB3799 /* Assets.xcassets */; };
 		0325B56C25C20CFD00AB3799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0325B56A25C20CFD00AB3799 /* LaunchScreen.storyboard */; };
+		D476332425C20EE900EB088A /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476332325C20EE900EB088A /* Drink.swift */; };
+		D476332825C20FC200EB088A /* DrinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476332725C20FC200EB088A /* DrinkController.swift */; };
+		D476332C25C213E100EB088A /* DrinkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476332B25C213E100EB088A /* DrinkError.swift */; };
+		D476333225C2224D00EB088A /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476333125C2224D00EB088A /* DrinkViewController.swift */; };
+		D476333625C224D900EB088A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476333525C224D900EB088A /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		0325B56825C20CFD00AB3799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0325B56B25C20CFD00AB3799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0325B56D25C20CFD00AB3799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D476332325C20EE900EB088A /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		D476332725C20FC200EB088A /* DrinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkController.swift; sourceTree = "<group>"; };
+		D476332B25C213E100EB088A /* DrinkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkError.swift; sourceTree = "<group>"; };
+		D476333125C2224D00EB088A /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
+		D476333525C224D900EB088A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +64,11 @@
 		0325B55E25C20CF800AB3799 /* Cocktails */ = {
 			isa = PBXGroup;
 			children = (
+				D476333025C2222A00EB088A /* ViewControllers */,
+				D476332A25C213AB00EB088A /* Helpers */,
+				D476332225C20EBF00EB088A /* ModelControllers */,
+				D476332125C20EB800EB088A /* Model */,
 				0325B57825C20D2B00AB3799 /* Views */,
-				0325B57725C20D2600AB3799 /* Controllers */,
-				0325B57625C20D1F00AB3799 /* Model */,
 				0325B57425C20D0F00AB3799 /* Resources */,
 			);
 			path = Cocktails;
@@ -71,20 +83,6 @@
 				0325B56D25C20CFD00AB3799 /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		0325B57625C20D1F00AB3799 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0325B57725C20D2600AB3799 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		0325B57825C20D2B00AB3799 /* Views */ = {
@@ -102,6 +100,39 @@
 				0325B56A25C20CFD00AB3799 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D476332125C20EB800EB088A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D476332325C20EE900EB088A /* Drink.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D476332225C20EBF00EB088A /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D476332725C20FC200EB088A /* DrinkController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		D476332A25C213AB00EB088A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D476332B25C213E100EB088A /* DrinkError.swift */,
+				D476333525C224D900EB088A /* UIViewControllerExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D476333025C2222A00EB088A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D476333125C2224D00EB088A /* DrinkViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D476332C25C213E100EB088A /* DrinkError.swift in Sources */,
+				D476332825C20FC200EB088A /* DrinkController.swift in Sources */,
 				0325B56025C20CF800AB3799 /* AppDelegate.swift in Sources */,
+				D476333225C2224D00EB088A /* DrinkViewController.swift in Sources */,
+				D476332425C20EE900EB088A /* Drink.swift in Sources */,
+				D476333625C224D900EB088A /* UIViewControllerExtension.swift in Sources */,
 				0325B56225C20CF800AB3799 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +359,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Cocktails/Info.plist;
+				INFOPLIST_FILE = Cocktails/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,7 +378,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Cocktails/Info.plist;
+				INFOPLIST_FILE = Cocktails/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
